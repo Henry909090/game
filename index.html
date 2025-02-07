@@ -7,17 +7,36 @@
     /* Allgemeine Gestaltung */
     body {
       background-color: #f0f8ff;
-      text-align: center;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
     }
     h1, h2, p {
       color: #333;
     }
+    /* Container für Spiel und Contract-Address (links/rechts) */
+    #gameContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0;
+    }
+    /* Styling der Contract-Adress-Elemente */
+    .contractText {
+      font-size: 24px;
+      color: #fff;
+      background-color: #333;
+      padding: 10px;
+      margin: 10px;
+      font-weight: bold;
+    }
+    #bottomContract {
+      text-align: center;
+    }
     /* Canvas-Styling */
     canvas {
       background-color: #000;
-      display: block;
-      margin: 0 auto;
       border: 2px solid #fff;
     }
     /* Rangliste */
@@ -54,7 +73,23 @@
   <h1>Snake Spiel</h1>
   <p id="continentDisplay">Lade Kontinent...</p>
   <p>Aktueller Score: <span id="score">0</span></p>
-  <canvas id="gameCanvas" width="400" height="400"></canvas>
+  
+  <!-- Container für das Spiel (Canvas) und die Contract-Adress-Elemente links & rechts -->
+  <div id="gameContainer">
+    <div id="leftContract" class="contractText">
+      Contract-Adress: Cq7yu3Z8m8njUqErWrWqjeijJRqd3vNR7ueNfhHopump
+    </div>
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <div id="rightContract" class="contractText">
+      Contract-Adress: Cq7yu3Z8m8njUqErWrWqjeijJRqd3vNR7ueNfhHopump
+    </div>
+  </div>
+  
+  <!-- Contract-Adress-Element unter dem Spiel -->
+  <div id="bottomContract" class="contractText">
+    Contract-Adress: Cq7yu3Z8m8njUqErWrWqjeijJRqd3vNR7ueNfhHopump
+  </div>
+  
   <br>
   <button id="startButton">Spiel starten</button>
   
